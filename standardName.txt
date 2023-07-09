@@ -1,0 +1,19 @@
+
+import java.util.Scanner;
+import java.util.StringTokenizer;
+
+public class standardName {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+        StringTokenizer st = new StringTokenizer(s);
+        while(st.hasMoreTokens()){
+            String word = st.nextToken();
+            word = word.toLowerCase();
+            char ch = Character.toUpperCase(word.charAt(0));
+            String sb = word.substring(1);
+            System.out.printf(ch + sb + " ");
+        }
+    }
+ 
+}
