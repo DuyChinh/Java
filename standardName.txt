@@ -1,19 +1,12 @@
+public String standardString(String s) {
+		return Character.toUpperCase(s.charAt(0)) + s.substring(1).toLowerCase();
+	}
 
-import java.util.Scanner;
-import java.util.StringTokenizer;
-
-public class standardName {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        String s = sc.nextLine();
-        StringTokenizer st = new StringTokenizer(s);
-        while(st.hasMoreTokens()){
-            String word = st.nextToken();
-            word = word.toLowerCase();
-            char ch = Character.toUpperCase(word.charAt(0));
-            String sb = word.substring(1);
-            System.out.printf(ch + sb + " ");
-        }
-    }
- 
-}
+	public void standardName() {
+		String[] arr = this.name.split("\\s+");
+		String res = "";
+		for (String x : arr) {
+			res += standardString(x) + " ";
+		}
+		this.name = res.substring(0, res.length() - 1);
+	}
